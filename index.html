@@ -21,8 +21,6 @@
       --accent2: #58b4ff;
 
       --red: #ff3b4d;
-      --dark-red: #9d1524;
-
       --green: #2bd576;
       --yellow: #ffc94d;
 
@@ -78,15 +76,14 @@
       padding: 20px;
     }
 
-    /* ==================================================
-       TOP
-    ================================================== */
+    /* =========================
+       TOP BAR
+    ========================= */
 
     .topbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       gap: 16px;
 
       padding: 17px 20px;
@@ -100,7 +97,6 @@
 
       position: sticky;
       top: 10px;
-
       z-index: 50;
 
       backdrop-filter: blur(12px);
@@ -128,7 +124,7 @@
           #b4001d
         );
 
-      color: white;
+      color: #fff;
 
       font-size: 20px;
       font-weight: 900;
@@ -192,13 +188,16 @@
       }
     }
 
+    /* =========================
+       NEWS TICKER
+    ========================= */
+
     .ticker {
       margin: 14px 0 18px;
 
       border-radius: 12px;
 
       overflow: hidden;
-
       white-space: nowrap;
 
       background: #b4001d;
@@ -229,15 +228,13 @@
       }
     }
 
-    /* ==================================================
-       STEP BAR
-    ================================================== */
+    /* =========================
+       STEPS
+    ========================= */
 
     .steps {
       display: grid;
-
-      grid-template-columns:
-        repeat(5,1fr);
+      grid-template-columns: repeat(5,1fr);
 
       gap: 8px;
 
@@ -277,9 +274,9 @@
         0 0 20px rgba(43,140,255,.18);
     }
 
-    /* ==================================================
+    /* =========================
        COMMON
-    ================================================== */
+    ========================= */
 
     .screen {
       display: none;
@@ -374,7 +371,6 @@
 
     .actions {
       display: flex;
-
       flex-wrap: wrap;
 
       gap: 10px;
@@ -407,9 +403,6 @@
           var(--accent),
           #1767cc
         );
-
-      box-shadow:
-        0 8px 20px rgba(43,140,255,.22);
     }
 
     .btn-secondary {
@@ -458,13 +451,12 @@
       transform: none;
     }
 
-    /* ==================================================
+    /* =========================
        PEOPLE
-    ================================================== */
+    ========================= */
 
     .people-grid {
       display: grid;
-
       grid-template-columns:
         repeat(3,minmax(0,1fr));
 
@@ -494,7 +486,6 @@
 
     .person-card:hover {
       transform: translateY(-5px);
-
       border-color: var(--accent);
     }
 
@@ -580,9 +571,9 @@
       line-height: 1.6;
     }
 
-    /* ==================================================
+    /* =========================
        INTERVIEW
-    ================================================== */
+    ========================= */
 
     .interview-grid {
       display: grid;
@@ -595,6 +586,7 @@
 
     .selected-person-title {
       margin: 0 0 4px;
+
       font-size: 30px;
     }
 
@@ -642,15 +634,32 @@
       line-height: 1.6;
     }
 
+    .note-help {
+      margin-bottom: 14px;
+
+      padding: 10px 12px;
+
+      border-radius: 10px;
+
+      background:
+        rgba(43,140,255,.08);
+
+      border:
+        1px solid rgba(43,140,255,.20);
+
+      color: #cfe7ff;
+
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
     .note-wrap {
       display: grid;
-
       gap: 14px;
     }
 
     .field {
       display: grid;
-
       gap: 6px;
     }
 
@@ -701,10 +710,6 @@
       color: var(--muted);
 
       font-size: 12px;
-    }
-
-    .interview-room {
-      min-height: 600px;
     }
 
     .live-box {
@@ -776,13 +781,12 @@
 
     .hint-box ul {
       color: var(--muted);
-
       line-height: 1.75;
     }
 
-    /* ==================================================
+    /* =========================
        ARTICLE
-    ================================================== */
+    ========================= */
 
     .article-grid {
       display: grid;
@@ -809,6 +813,8 @@
       background: #091624;
 
       line-height: 1.6;
+
+      white-space: pre-wrap;
     }
 
     .note-item small {
@@ -821,9 +827,9 @@
       font-weight: 800;
     }
 
-    /* ==================================================
+    /* =========================
        QUIZ
-    ================================================== */
+    ========================= */
 
     .quiz-card {
       max-width: 860px;
@@ -882,9 +888,9 @@
       color: var(--green);
     }
 
-    /* ==================================================
+    /* =========================
        RESULT
-    ================================================== */
+    ========================= */
 
     .result-card {
       max-width: 970px;
@@ -970,9 +976,9 @@
       font-size: 13px;
     }
 
-    /* ==================================================
+    /* =========================
        PADLET
-    ================================================== */
+    ========================= */
 
     .padlet-guide {
       max-width: 970px;
@@ -1022,9 +1028,9 @@
       font-size: 18px;
     }
 
-    /* ==================================================
+    /* =========================
        TIMELINE
-    ================================================== */
+    ========================= */
 
     .timeline {
       margin-top: 22px;
@@ -1036,6 +1042,12 @@
       border: 1px solid var(--line);
 
       background: var(--panel);
+    }
+
+    .timeline-intro {
+      color: var(--muted);
+
+      line-height: 1.6;
     }
 
     .timeline-row {
@@ -1052,6 +1064,10 @@
         1px solid #1c3349;
     }
 
+    .timeline-row:last-of-type {
+      border-bottom: 0;
+    }
+
     .timeline-year {
       color: var(--accent2);
 
@@ -1059,19 +1075,27 @@
       font-weight: 900;
     }
 
-    .big-flow {
-      margin-top: 18px;
+    .timeline-detail {
+      margin-top: 3px;
 
-      padding: 20px;
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* =========================
+       BIG FLOW - 수정 핵심
+    ========================= */
+
+    .big-flow {
+      margin-top: 22px;
+
+      padding: 22px;
 
       border-radius: 16px;
 
       border: 1px solid var(--line);
-
-      text-align: center;
-
-      font-weight: 900;
-      line-height: 2;
 
       background:
         linear-gradient(
@@ -1079,6 +1103,47 @@
           rgba(43,140,255,.12),
           rgba(255,59,77,.05)
         );
+
+      text-align: center;
+    }
+
+    .big-flow-title {
+      margin-bottom: 18px;
+
+      color: var(--accent2);
+
+      font-size: 13px;
+      font-weight: 900;
+
+      letter-spacing: 1px;
+    }
+
+    .flow-item {
+      padding: 12px 10px;
+
+      font-size: 17px;
+      font-weight: 900;
+
+      line-height: 1.5;
+    }
+
+    .flow-item.man {
+      color: #ffe2a3;
+
+      background:
+        rgba(255,201,77,.07);
+
+      border:
+        1px solid rgba(255,201,77,.20);
+
+      border-radius: 12px;
+    }
+
+    .flow-arrow {
+      color: var(--accent2);
+
+      font-size: 22px;
+      font-weight: 900;
     }
 
     .thinking-question {
@@ -1099,11 +1164,13 @@
       text-align: center;
 
       font-weight: 800;
+
+      line-height: 1.6;
     }
 
-    /* ==================================================
+    /* =========================
        RESET
-    ================================================== */
+    ========================= */
 
     .reset-confirm {
       display: none;
@@ -1125,9 +1192,9 @@
       display: block;
     }
 
-    /* ==================================================
+    /* =========================
        TOAST
-    ================================================== */
+    ========================= */
 
     .toast {
       position: fixed;
@@ -1168,9 +1235,9 @@
       display: none;
     }
 
-    /* ==================================================
+    /* =========================
        MODAL
-    ================================================== */
+    ========================= */
 
     .modal-backdrop {
       position: fixed;
@@ -1235,6 +1302,8 @@
         1px solid rgba(43,140,255,.25);
 
       color: #dbeeff;
+
+      line-height: 1.6;
     }
 
     .modal-title-warning {
@@ -1270,10 +1339,9 @@
 
     .modal-actions {
       display: flex;
+      flex-wrap: wrap;
 
       gap: 10px;
-
-      flex-wrap: wrap;
 
       margin-top: 20px;
     }
@@ -1284,9 +1352,9 @@
       min-width: 150px;
     }
 
-    /* ==================================================
+    /* =========================
        RESPONSIVE
-    ================================================== */
+    ========================= */
 
     @media (max-width:1050px) {
 
@@ -1338,8 +1406,16 @@
 
       .result-top {
         flex-direction: column;
-
         align-items: flex-start;
+      }
+
+      .timeline-row {
+        grid-template-columns:
+          70px 1fr;
+      }
+
+      .flow-item {
+        font-size: 15px;
       }
 
     }
@@ -1414,9 +1490,9 @@
   </nav>
 
 
-  <!-- ==================================================
+  <!-- =========================
        STEP 1
-  ================================================== -->
+  ========================== -->
 
   <section
     class="screen active"
@@ -1464,9 +1540,9 @@
   </section>
 
 
-  <!-- ==================================================
+  <!-- =========================
        STEP 2
-  ================================================== -->
+  ========================== -->
 
   <section
     class="screen"
@@ -1506,10 +1582,18 @@
           기자 수첩
         </h3>
 
+
         <p class="note-intro">
           AI의 답변에서 기사에 필요한 핵심 단서를 찾아
           자신의 말로 기록하세요.
         </p>
+
+
+        <div class="note-help">
+          ※ 각 문항은 최대 200자입니다.
+          200자를 모두 채울 필요는 없습니다.
+          기사에 필요한 핵심 내용만 정리하세요.
+        </div>
 
 
         <div class="note-wrap">
@@ -1529,7 +1613,7 @@
               id="note1"
               rows="4"
               maxlength="200"
-              placeholder="AI의 답변에서 사건의 배경과 원인을 찾아 자신의 말로 정리하세요."
+              placeholder="사건의 배경과 원인을 자신의 말로 정리하세요."
             ></textarea>
 
             <div class="counter">
@@ -1554,7 +1638,7 @@
               id="note2"
               rows="4"
               maxlength="200"
-              placeholder="이 인물이 사건에서 한 중요한 행동이나 결정을 정리하세요."
+              placeholder="이 인물의 중요한 행동이나 결정을 정리하세요."
             ></textarea>
 
             <div class="counter">
@@ -1638,14 +1722,14 @@
 
           <br>
 
-          5. AI의 답변이 이상하거나 사실과 맞지 않는 것 같으면 다시 질문하세요.
+          5. 답변이 이상하거나 사실과 맞지 않는 것 같으면 다시 질문하세요.
 
         </div>
 
       </div>
 
 
-      <div class="panel interview-room">
+      <div class="panel">
 
         <div class="panel-title">
           AI INTERVIEW ROOM
@@ -1663,7 +1747,9 @@
             LIVE INTERVIEW
           </div>
 
-          <h3 id="roomPersonName"></h3>
+          <h3
+            id="roomPersonName"
+          ></h3>
 
           <div
             id="roomPersonTopic"
@@ -1679,7 +1765,7 @@
             line-height:1.7;
           "
         >
-          왼쪽의 취재 미션을 확인한 뒤
+          취재 미션을 확인한 뒤
           역사 인물에게 직접 질문하세요.
 
           <br><br>
@@ -1714,7 +1800,9 @@
             질문 힌트
           </strong>
 
-          <ul id="hintList"></ul>
+          <ul
+            id="hintList"
+          ></ul>
 
         </div>
 
@@ -1744,9 +1832,9 @@
   </section>
 
 
-  <!-- ==================================================
+  <!-- =========================
        STEP 3
-  ================================================== -->
+  ========================== -->
 
   <section
     class="screen"
@@ -1764,8 +1852,8 @@
       </h2>
 
       <p>
-        취재 수첩의 내용을 바탕으로
-        사건의 핵심이 드러나는 뉴스 기사를 직접 작성하세요.
+        기자 수첩의 내용을 활용하여
+        사건의 핵심이 드러나는 역사 기사를 직접 작성하세요.
       </p>
 
     </div>
@@ -1810,16 +1898,16 @@
           </label>
 
           <div class="prompt">
-            취재한 내용을 바탕으로
-            사건의 배경, 인물의 행동, 목표, 결과가 드러나도록
-            자신의 말로 역사 기사를 작성하세요.
+            기자 수첩의 내용을 활용하여
+            사건이 일어난 이유, 인물의 주요 행동과 목표,
+            사건의 결과가 드러나는 역사 기사를 작성하세요.
           </div>
 
           <textarea
             id="articleInput"
             rows="10"
             maxlength="500"
-            placeholder="기자 수첩의 내용을 바탕으로 역사 기사를 작성하세요."
+            placeholder="기자 수첩의 내용을 바탕으로 자신의 말로 역사 기사를 작성하세요."
           ></textarea>
 
           <div class="counter">
@@ -1831,11 +1919,13 @@
 
         <div class="warning">
 
-          AI가 헤드라인이나 기사를 대신 작성하지 않습니다.
+          최대 500자입니다.
+          500자를 모두 채울 필요는 없습니다.
 
           <br>
 
-          기자 수첩을 참고하여 자신의 말로 직접 작성하세요.
+          AI가 기사를 대신 작성하지 않습니다.
+          자신의 말로 작성하세요.
 
         </div>
 
@@ -1861,7 +1951,9 @@
               ① 왜 이런 일이 일어났을까?
             </small>
 
-            <div id="previewNote1"></div>
+            <div
+              id="previewNote1"
+            ></div>
 
           </div>
 
@@ -1872,7 +1964,9 @@
               ② 이 인물은 무엇을 했을까?
             </small>
 
-            <div id="previewNote2"></div>
+            <div
+              id="previewNote2"
+            ></div>
 
           </div>
 
@@ -1883,7 +1977,9 @@
               ③ 무엇을 이루려고 했을까?
             </small>
 
-            <div id="previewNote3"></div>
+            <div
+              id="previewNote3"
+            ></div>
 
           </div>
 
@@ -1894,7 +1990,9 @@
               ④ 실제로 어떻게 되었을까?
             </small>
 
-            <div id="previewNote4"></div>
+            <div
+              id="previewNote4"
+            ></div>
 
           </div>
 
@@ -1926,9 +2024,9 @@
   </section>
 
 
-  <!-- ==================================================
+  <!-- =========================
        STEP 4
-  ================================================== -->
+  ========================== -->
 
   <section
     class="screen"
@@ -1988,9 +2086,9 @@
   </section>
 
 
-  <!-- ==================================================
+  <!-- =========================
        STEP 5
-  ================================================== -->
+  ========================== -->
 
   <section
     class="screen"
@@ -2069,6 +2167,8 @@
     </div>
 
 
+    <!-- PADLET 안내 -->
+
     <div class="padlet-guide">
 
       <strong>
@@ -2077,11 +2177,14 @@
 
       <br><br>
 
-      ① 먼저 <strong>신문 기사 이미지 저장</strong> 버튼을 누르세요.
+      ① 먼저
+      <strong>신문 기사 이미지 저장</strong>
+      버튼을 누르세요.
 
       <br>
 
-      ② 저장 완료 후 <strong>Padlet 열기</strong>를 누르세요.
+      ② 저장 완료 후
+      <strong>Padlet 열기</strong>를 누르세요.
 
 
       <div class="padlet-title-warning">
@@ -2103,7 +2206,8 @@
       </div>
 
 
-      ③ 자신이 취재한 역사 특보 이미지를 게시물에 업로드하세요.
+      ③ 자신이 취재한 역사 특보 이미지를
+      게시물에 업로드하세요.
 
     </div>
 
@@ -2165,7 +2269,6 @@
           네, 초기화
         </button>
 
-
         <button
           class="btn btn-secondary"
           id="resetNoBtn"
@@ -2178,6 +2281,10 @@
     </div>
 
 
+    <!-- =========================
+         HISTORY TIMELINE
+    ========================== -->
+
     <div class="timeline">
 
       <h3>
@@ -2185,7 +2292,7 @@
       </h3>
 
 
-      <p style="color:var(--muted);">
+      <p class="timeline-intro">
         한 사람의 사건만 보지 말고,
         고려 사회가 어떻게 흔들리고 변해 갔는지 살펴보세요.
       </p>
@@ -2198,9 +2305,18 @@
         </div>
 
         <div>
-          <strong>이자겸</strong>
+          <strong>
+            이자겸
+          </strong>
+
           <br>
+
           이자겸의 난
+
+          <div class="timeline-detail">
+            문벌 귀족과 외척의 권력 집중
+          </div>
+
         </div>
 
       </div>
@@ -2213,9 +2329,18 @@
         </div>
 
         <div>
-          <strong>묘청</strong>
+          <strong>
+            묘청
+          </strong>
+
           <br>
+
           서경 천도 운동 · 서경 봉기
+
+          <div class="timeline-detail">
+            수도와 대외 정책을 둘러싼 정치 세력의 대립
+          </div>
+
         </div>
 
       </div>
@@ -2228,9 +2353,18 @@
         </div>
 
         <div>
-          <strong>정중부</strong>
+          <strong>
+            정중부
+          </strong>
+
           <br>
+
           무신 정변
+
+          <div class="timeline-detail">
+            문신 중심 정치가 무너지고 무신이 권력을 장악
+          </div>
+
         </div>
 
       </div>
@@ -2243,9 +2377,18 @@
         </div>
 
         <div>
-          <strong>망이·망소이</strong>
+          <strong>
+            망이·망소이
+          </strong>
+
           <br>
+
           공주 명학소 봉기
+
+          <div class="timeline-detail">
+            차별과 수탈에 맞선 하층민의 저항
+          </div>
+
         </div>
 
       </div>
@@ -2258,9 +2401,19 @@
         </div>
 
         <div>
-          <strong>최충헌</strong>
+          <strong>
+            최충헌
+          </strong>
+
           <br>
-          이의민 제거 · 권력 장악
+
+          최씨 무신 정권의 성립
+
+          <div class="timeline-detail">
+            이의민을 제거하고 권력을 장악하여
+            최씨 무신 정권의 기반을 마련함
+          </div>
+
         </div>
 
       </div>
@@ -2273,9 +2426,19 @@
         </div>
 
         <div>
-          <strong>만적</strong>
+          <strong>
+            만적
+          </strong>
+
           <br>
+
           노비 봉기 모의
+
+          <div class="timeline-detail">
+            노비 신분에서 벗어나려는 요구와
+            신분 질서에 대한 도전
+          </div>
+
         </div>
 
       </div>
@@ -2288,9 +2451,18 @@
         </div>
 
         <div>
-          <strong>최충헌</strong>
+          <strong>
+            최충헌
+          </strong>
+
           <br>
+
           교정도감 설치
+
+          <div class="timeline-detail">
+            최씨 무신 정권의 정치 권력이 더욱 강화됨
+          </div>
+
         </div>
 
       </div>
@@ -2303,35 +2475,75 @@
         </div>
 
         <div>
-          <strong>최우</strong>
+          <strong>
+            최우
+          </strong>
+
           <br>
+
           정방 설치
+
+          <div class="timeline-detail">
+            인사권을 장악하며 최씨 무신 정권을 이어 감
+          </div>
+
         </div>
 
       </div>
 
 
+      <!-- =========================
+           전체 흐름 - 수정본
+      ========================== -->
+
       <div class="big-flow">
 
-        문벌 귀족 사회의 동요
+        <div class="big-flow-title">
+          GBS HISTORY FLOW
+        </div>
 
-        <br>
-        ↓
-        <br>
 
-        무신의 집권
+        <div class="flow-item">
+          문벌 귀족 사회의 동요
+        </div>
 
-        <br>
-        ↓
-        <br>
+        <div class="flow-arrow">
+          ↓
+        </div>
 
-        무신 정권의 강화
 
-        <br>
-        ↓
-        <br>
+        <div class="flow-item">
+          무신 정변과 무신의 집권
+        </div>
 
-        농민·천민 등 하층민의 저항
+        <div class="flow-arrow">
+          ↓
+        </div>
+
+
+        <div class="flow-item">
+          무신 정권 아래 농민·천민의 저항
+        </div>
+
+        <div class="flow-arrow">
+          ↓
+        </div>
+
+
+        <div class="flow-item">
+          최씨 무신 정권의 성립과 권력 강화
+        </div>
+
+        <div class="flow-arrow">
+          ↓
+        </div>
+
+
+        <div class="flow-item man">
+          만적의 봉기 모의
+          <br>
+          ― 신분 질서에 대한 도전
+        </div>
 
       </div>
 
@@ -2339,7 +2551,8 @@
       <div class="thinking-question">
 
         이 사건들을 통해
-        고려 사회가 어떻게 변하고 있었는지 생각해 보세요.
+        고려의 정치와 사회가 어떻게 변하고 있었는지
+        생각해 보세요.
 
       </div>
 
@@ -2350,9 +2563,9 @@
 </div>
 
 
-<!-- ==================================================
+<!-- =========================
      PADLET MODAL
-================================================== -->
+========================== -->
 
 <div
   class="modal-backdrop"
@@ -2433,17 +2646,17 @@
 
 <script>
 
-/* ==================================================
-   PADLET URL
-================================================== */
+/* =========================
+   PADLET
+========================= */
 
 const PADLET_URL =
   "https://padlet.com/bbogle85/3-e5avhe0nimq2sfwg";
 
 
-/* ==================================================
-   PEOPLE DATA
-================================================== */
+/* =========================
+   PEOPLE
+========================= */
 
 const people = {
 
@@ -2726,7 +2939,7 @@ const people = {
       "1196",
 
     topic:
-      "무신 정권 장악",
+      "최씨 무신 정권의 성립",
 
     keyword:
       "권력의 강화",
@@ -2796,10 +3009,10 @@ const people = {
       "노비 봉기 모의",
 
     keyword:
-      "신분제에 도전",
+      "신분 질서에 도전",
 
     desc:
-      "노비 신분에서 벗어나 새로운 사회를 만들려 하다.",
+      "노비 신분에서 벗어나 신분 질서에 도전하려 하다.",
 
     gemUrl:
       "https://gemini.google.com/gem/1nFLZo0_UrGUIJ9DpAt93EhsGR0ax-19B?usp=sharing",
@@ -2850,18 +3063,18 @@ const people = {
 };
 
 
-/* ==================================================
+/* =========================
    STATE
-================================================== */
+========================= */
 
 let selectedPerson = null;
 let currentStep = 1;
 let quizPassed = false;
 
 
-/* ==================================================
+/* =========================
    DOM
-================================================== */
+========================= */
 
 const peopleGrid =
   document.getElementById("peopleGrid");
@@ -2909,9 +3122,9 @@ const padletModal =
   document.getElementById("padletModal");
 
 
-/* ==================================================
-   RENDER PEOPLE
-================================================== */
+/* =========================
+   PEOPLE RENDER
+========================= */
 
 function renderPeople() {
 
@@ -2961,8 +3174,7 @@ function renderPeople() {
         "click",
         () => {
 
-          selectedPerson =
-            key;
+          selectedPerson = key;
 
           startInterviewBtn.disabled =
             false;
@@ -3005,14 +3217,13 @@ function updateSelectedCards() {
 }
 
 
-/* ==================================================
+/* =========================
    STEP
-================================================== */
+========================= */
 
 function showStep(step) {
 
-  currentStep =
-    step;
+  currentStep = step;
 
   document
     .querySelectorAll(".screen")
@@ -3053,9 +3264,9 @@ function showStep(step) {
 }
 
 
-/* ==================================================
+/* =========================
    INTERVIEW
-================================================== */
+========================= */
 
 function prepareInterview() {
 
@@ -3096,15 +3307,15 @@ function prepareInterview() {
         .map(
           (mission,index) => `
 
-          <div class="mission">
+            <div class="mission">
 
-            <strong>
-              MISSION 0${index + 1}
-            </strong>
+              <strong>
+                MISSION 0${index + 1}
+              </strong>
 
-            ${mission}
+              ${mission}
 
-          </div>
+            </div>
 
           `
         )
@@ -3120,12 +3331,19 @@ function prepareInterview() {
         )
         .join("");
 
+  hintBox.classList.remove(
+    "show"
+  );
+
+  hintBtn.textContent =
+    "💡 질문이 막히면 힌트 보기";
+
 }
 
 
-/* ==================================================
-   BUTTONS
-================================================== */
+/* =========================
+   STEP 1 → STEP 2
+========================= */
 
 startInterviewBtn
   .addEventListener(
@@ -3144,13 +3362,23 @@ startInterviewBtn
   );
 
 
+/* =========================
+   GEM
+========================= */
+
 gemInterviewBtn
   .addEventListener(
     "click",
     () => {
 
       if (!selectedPerson) {
+
+        showToast(
+          "먼저 취재 대상을 선택하세요."
+        );
+
         return;
+
       }
 
       window.open(
@@ -3163,6 +3391,10 @@ gemInterviewBtn
   );
 
 
+/* =========================
+   HINT
+========================= */
+
 hintBtn
   .addEventListener(
     "click",
@@ -3172,41 +3404,67 @@ hintBtn
         "show"
       );
 
+      hintBtn.textContent =
+        hintBox.classList.contains("show")
+          ? "💡 질문 힌트 닫기"
+          : "💡 질문이 막히면 힌트 보기";
+
     }
   );
 
 
-/* ==================================================
+/* =========================
    COUNTERS
-================================================== */
+========================= */
 
 function bindCounter(
   input,
-  id
+  counterId
 ) {
 
   const counter =
-    document.getElementById(id);
+    document.getElementById(
+      counterId
+    );
+
+  function update() {
+
+    counter.textContent =
+      input.value.length;
+
+    saveState();
+
+  }
 
   input.addEventListener(
     "input",
-    () => {
-
-      counter.textContent =
-        input.value.length;
-
-      saveState();
-
-    }
+    update
   );
+
+  update();
 
 }
 
 
-bindCounter(note1,"note1Count");
-bindCounter(note2,"note2Count");
-bindCounter(note3,"note3Count");
-bindCounter(note4,"note4Count");
+bindCounter(
+  note1,
+  "note1Count"
+);
+
+bindCounter(
+  note2,
+  "note2Count"
+);
+
+bindCounter(
+  note3,
+  "note3Count"
+);
+
+bindCounter(
+  note4,
+  "note4Count"
+);
 
 bindCounter(
   headlineInput,
@@ -3219,38 +3477,38 @@ bindCounter(
 );
 
 
-/* ==================================================
-   PREVIEW
-================================================== */
+/* =========================
+   NOTE PREVIEW
+========================= */
 
 function updateNotePreview() {
 
   document
     .getElementById("previewNote1")
     .textContent =
-      note1.value;
+      note1.value.trim();
 
   document
     .getElementById("previewNote2")
     .textContent =
-      note2.value;
+      note2.value.trim();
 
   document
     .getElementById("previewNote3")
     .textContent =
-      note3.value;
+      note3.value.trim();
 
   document
     .getElementById("previewNote4")
     .textContent =
-      note4.value;
+      note4.value.trim();
 
 }
 
 
-/* ==================================================
+/* =========================
    STEP 2 → 3
-================================================== */
+========================= */
 
 document
   .getElementById("goArticleBtn")
@@ -3281,9 +3539,9 @@ document
   );
 
 
-/* ==================================================
-   STEP 3 → QUIZ
-================================================== */
+/* =========================
+   STEP 3 → 4
+========================= */
 
 document
   .getElementById("goQuizBtn")
@@ -3312,9 +3570,9 @@ document
   );
 
 
-/* ==================================================
+/* =========================
    QUIZ
-================================================== */
+========================= */
 
 function prepareQuiz() {
 
@@ -3326,6 +3584,9 @@ function prepareQuiz() {
   factStatus.textContent =
     "";
 
+  factStatus.className =
+    "fact-status";
+
   const quiz =
     people[selectedPerson].quiz;
 
@@ -3334,12 +3595,12 @@ function prepareQuiz() {
     .textContent =
       quiz.question;
 
-  const options =
+  const optionsBox =
     document.getElementById(
       "quizOptions"
     );
 
-  options.innerHTML =
+  optionsBox.innerHTML =
     "";
 
   const labels =
@@ -3359,10 +3620,16 @@ function prepareQuiz() {
       button.textContent =
         `${labels[index]} ${option}`;
 
-      button.onclick =
-        () => checkAnswer(index);
+      button.addEventListener(
+        "click",
+        () => {
 
-      options.appendChild(
+          checkAnswer(index);
+
+        }
+      );
+
+      optionsBox.appendChild(
         button
       );
 
@@ -3391,6 +3658,10 @@ function checkAnswer(index) {
     publishBtn.disabled =
       false;
 
+    showToast(
+      "팩트체크를 통과했습니다."
+    );
+
   }
 
   else {
@@ -3413,9 +3684,9 @@ function checkAnswer(index) {
 }
 
 
-/* ==================================================
+/* =========================
    PUBLISH
-================================================== */
+========================= */
 
 publishBtn
   .addEventListener(
@@ -3436,6 +3707,10 @@ publishBtn
 
 function renderResult() {
 
+  if (!selectedPerson) {
+    return;
+  }
+
   const person =
     people[selectedPerson];
 
@@ -3447,25 +3722,29 @@ function renderResult() {
   document
     .getElementById("resultHeadline")
     .textContent =
-      headlineInput.value;
+      headlineInput.value.trim();
 
   document
     .getElementById("resultArticle")
     .textContent =
-      articleInput.value;
+      articleInput.value.trim();
 
 }
 
 
-/* ==================================================
+/* =========================
    COPY
-================================================== */
+========================= */
 
 document
   .getElementById("copyArticleBtn")
   .addEventListener(
     "click",
     async () => {
+
+      if (!selectedPerson) {
+        return;
+      }
 
       const person =
         people[selectedPerson];
@@ -3476,9 +3755,9 @@ document
 ${person.year} ${person.name}
 ${person.topic}
 
-${headlineInput.value}
+${headlineInput.value.trim()}
 
-${articleInput.value}`;
+${articleInput.value.trim()}`;
 
       try {
 
@@ -3513,25 +3792,19 @@ ${articleInput.value}`;
 
         area.remove();
 
+        showToast(
+          "기사 내용이 복사되었습니다."
+        );
+
       }
 
     }
   );
 
 
-/* ==================================================
-   PNG
-================================================== */
-
-document
-  .getElementById(
-    "downloadNewspaperBtn"
-  )
-  .addEventListener(
-    "click",
-    downloadNewspaper
-  );
-
+/* =========================
+   PNG HELPERS
+========================= */
 
 function getWrappedLines(
   ctx,
@@ -3557,8 +3830,7 @@ function getWrappedLines(
 
       }
 
-      let line =
-        "";
+      let line = "";
 
       Array.from(paragraph)
         .forEach(char => {
@@ -3574,15 +3846,13 @@ function getWrappedLines(
 
             result.push(line);
 
-            line =
-              char;
+            line = char;
 
           }
 
           else {
 
-            line =
-              test;
+            line = test;
 
           }
 
@@ -3609,8 +3879,7 @@ function drawLines(
   align = "left"
 ) {
 
-  ctx.textAlign =
-    align;
+  ctx.textAlign = align;
 
   lines.forEach(
     line => {
@@ -3621,8 +3890,7 @@ function drawLines(
         y
       );
 
-      y +=
-        lineHeight;
+      y += lineHeight;
 
     }
   );
@@ -3632,7 +3900,25 @@ function drawLines(
 }
 
 
+/* =========================
+   PNG DOWNLOAD
+========================= */
+
+document
+  .getElementById(
+    "downloadNewspaperBtn"
+  )
+  .addEventListener(
+    "click",
+    downloadNewspaper
+  );
+
+
 function downloadNewspaper() {
+
+  if (!selectedPerson) {
+    return;
+  }
 
   const person =
     people[selectedPerson];
@@ -3645,11 +3931,6 @@ function downloadNewspaper() {
   const ctx =
     canvas.getContext("2d");
 
-
-  /*
-    먼저 임시 Canvas 크기를 설정해서
-    텍스트 줄 수를 계산한다.
-  */
 
   canvas.width =
     1200;
@@ -3664,7 +3945,7 @@ function downloadNewspaper() {
   const headlineLines =
     getWrappedLines(
       ctx,
-      headlineInput.value,
+      headlineInput.value.trim(),
       1000
     );
 
@@ -3675,7 +3956,7 @@ function downloadNewspaper() {
   const articleLines =
     getWrappedLines(
       ctx,
-      articleInput.value,
+      articleInput.value.trim(),
       1000
     );
 
@@ -3684,11 +3965,17 @@ function downloadNewspaper() {
     '23px "Malgun Gothic", Arial, sans-serif';
 
   const noteTexts = [
-    note1.value,
-    note2.value,
-    note3.value,
-    note4.value
+
+    note1.value.trim(),
+
+    note2.value.trim(),
+
+    note3.value.trim(),
+
+    note4.value.trim()
+
   ];
+
 
   const noteLines =
     noteTexts.map(
@@ -3701,15 +3988,12 @@ function downloadNewspaper() {
     );
 
 
-  /*
-    내용 길이에 따라 자동 높이 계산
-  */
-
   const headlineHeight =
     Math.max(
       1,
       headlineLines.length
     ) * 72;
+
 
   const articleHeight =
     Math.max(
@@ -3717,8 +4001,10 @@ function downloadNewspaper() {
       articleLines.length
     ) * 47;
 
+
   let notesHeight =
     100;
+
 
   noteLines.forEach(
     lines => {
@@ -3763,7 +4049,7 @@ function downloadNewspaper() {
   );
 
 
-  /* 외곽선 */
+  /* 외곽 */
 
   ctx.strokeStyle =
     "#202020";
@@ -3785,7 +4071,7 @@ function downloadNewspaper() {
     "center";
 
   ctx.fillStyle =
-    "#111";
+    "#111111";
 
   ctx.font =
     'bold 70px "Malgun Gothic", Arial, sans-serif';
@@ -3819,6 +4105,12 @@ function downloadNewspaper() {
     210
   );
 
+  ctx.strokeStyle =
+    "#111111";
+
+  ctx.lineWidth =
+    3;
+
   ctx.stroke();
 
 
@@ -3832,6 +4124,8 @@ function downloadNewspaper() {
   );
 
 
+  /* Breaking */
+
   ctx.fillStyle =
     "#a82222";
 
@@ -3844,7 +4138,7 @@ function downloadNewspaper() {
 
 
   ctx.fillStyle =
-    "#fff";
+    "#ffffff";
 
   ctx.font =
     'bold 31px Arial, sans-serif';
@@ -3861,11 +4155,13 @@ function downloadNewspaper() {
   let y =
     445;
 
+
   ctx.fillStyle =
-    "#111";
+    "#111111";
 
   ctx.font =
     'bold 56px "Malgun Gothic", Arial, sans-serif';
+
 
   y =
     drawLines(
@@ -3878,8 +4174,7 @@ function downloadNewspaper() {
     );
 
 
-  y +=
-    20;
+  y += 20;
 
 
   ctx.beginPath();
@@ -3895,7 +4190,7 @@ function downloadNewspaper() {
   );
 
   ctx.strokeStyle =
-    "#333";
+    "#333333";
 
   ctx.lineWidth =
     2;
@@ -3905,14 +4200,16 @@ function downloadNewspaper() {
 
   /* article */
 
-  y +=
-    60;
+  y += 60;
+
 
   ctx.textAlign =
     "left";
 
+
   ctx.font =
     'bold 29px "Malgun Gothic", Arial, sans-serif';
+
 
   ctx.fillText(
     "HISTORY REPORT",
@@ -3920,12 +4217,13 @@ function downloadNewspaper() {
     y
   );
 
-  y +=
-    50;
+
+  y += 50;
 
 
   ctx.font =
     '29px "Malgun Gothic", Arial, sans-serif';
+
 
   y =
     drawLines(
@@ -3938,23 +4236,18 @@ function downloadNewspaper() {
     );
 
 
-  y +=
-    45;
+  /* notes */
 
+  y += 45;
 
-  /*
-    기자수첩 영역
-  */
 
   const noteBoxTop =
     y;
 
-  const noteBoxBottom =
-    y + notesHeight;
-
 
   ctx.fillStyle =
     "#e7dfce";
+
 
   ctx.fillRect(
     80,
@@ -3965,10 +4258,12 @@ function downloadNewspaper() {
 
 
   ctx.fillStyle =
-    "#111";
+    "#111111";
+
 
   ctx.font =
     'bold 29px "Malgun Gothic", Arial, sans-serif';
+
 
   ctx.fillText(
     "REPORTER NOTE",
@@ -3977,8 +4272,7 @@ function downloadNewspaper() {
   );
 
 
-  y +=
-    95;
+  y += 95;
 
 
   const noteTitles = [
@@ -4000,18 +4294,20 @@ function downloadNewspaper() {
       ctx.font =
         'bold 24px "Malgun Gothic", Arial, sans-serif';
 
+
       ctx.fillText(
         noteTitles[index],
         110,
         y
       );
 
-      y +=
-        36;
+
+      y += 36;
 
 
       ctx.font =
         '23px "Malgun Gothic", Arial, sans-serif';
+
 
       y =
         drawLines(
@@ -4023,23 +4319,26 @@ function downloadNewspaper() {
           "left"
         );
 
-      y +=
-        35;
+
+      y += 35;
 
     }
   );
 
 
-  /* Footer */
+  /* footer */
 
   ctx.textAlign =
     "center";
 
+
   ctx.fillStyle =
-    "#333";
+    "#333333";
+
 
   ctx.font =
     '21px "Malgun Gothic", Arial, sans-serif';
+
 
   ctx.fillText(
     "GBS HISTORY NEWS · 고려의 현장을 기록하다",
@@ -4078,8 +4377,15 @@ function downloadNewspaper() {
         url;
 
 
+      const safeName =
+        person.name.replace(
+          /[\\/:*?"<>|]/g,
+          ""
+        );
+
+
       link.download =
-        `GBS_${person.year}_${person.name.replace(/[\\/:*?"<>|]/g,"")}_역사특보.png`;
+        `GBS_${person.year}_${safeName}_역사특보.png`;
 
 
       document.body.appendChild(
@@ -4127,9 +4433,9 @@ function downloadNewspaper() {
 }
 
 
-/* ==================================================
+/* =========================
    PADLET
-================================================== */
+========================= */
 
 function openPadlet() {
 
@@ -4143,7 +4449,9 @@ function openPadlet() {
 
 
 document
-  .getElementById("openPadletBtn")
+  .getElementById(
+    "openPadletBtn"
+  )
   .addEventListener(
     "click",
     () => {
@@ -4159,7 +4467,9 @@ document
 
 
 document
-  .getElementById("directPadletBtn")
+  .getElementById(
+    "directPadletBtn"
+  )
   .addEventListener(
     "click",
     openPadlet
@@ -4167,7 +4477,9 @@ document
 
 
 document
-  .getElementById("closePadletModalBtn")
+  .getElementById(
+    "closePadletModalBtn"
+  )
   .addEventListener(
     "click",
     () => {
@@ -4180,12 +4492,51 @@ document
   );
 
 
-/* ==================================================
+padletModal
+  .addEventListener(
+    "click",
+    event => {
+
+      if (
+        event.target === padletModal
+      ) {
+
+        padletModal.classList.remove(
+          "show"
+        );
+
+      }
+
+    }
+  );
+
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (
+      event.key === "Escape"
+    ) {
+
+      padletModal.classList.remove(
+        "show"
+      );
+
+    }
+
+  }
+);
+
+
+/* =========================
    BACK
-================================================== */
+========================= */
 
 document
-  .querySelectorAll("[data-back]")
+  .querySelectorAll(
+    "[data-back]"
+  )
   .forEach(
     button => {
 
@@ -4198,15 +4549,24 @@ document
               button.dataset.back
             );
 
+
           if (step === 2) {
+
             prepareInterview();
+
           }
+
 
           if (step === 3) {
+
             updateNotePreview();
+
           }
 
-          showStep(step);
+
+          showStep(
+            step
+          );
 
         }
       );
@@ -4215,37 +4575,50 @@ document
   );
 
 
-/* ==================================================
+/* =========================
    RESET
-================================================== */
+========================= */
 
 document
   .getElementById("resetBtn")
-  .onclick =
+  .addEventListener(
+    "click",
     () => {
 
       document
-        .getElementById("resetConfirm")
-        .classList.add("show");
+        .getElementById(
+          "resetConfirm"
+        )
+        .classList.add(
+          "show"
+        );
 
-    };
+    }
+  );
 
 
 document
   .getElementById("resetNoBtn")
-  .onclick =
+  .addEventListener(
+    "click",
     () => {
 
       document
-        .getElementById("resetConfirm")
-        .classList.remove("show");
+        .getElementById(
+          "resetConfirm"
+        )
+        .classList.remove(
+          "show"
+        );
 
-    };
+    }
+  );
 
 
 document
   .getElementById("resetYesBtn")
-  .onclick =
+  .addEventListener(
+    "click",
     () => {
 
       localStorage.removeItem(
@@ -4254,25 +4627,29 @@ document
 
       location.reload();
 
-    };
+    }
+  );
 
 
-/* ==================================================
+/* =========================
    TOAST
-================================================== */
+========================= */
 
 function showToast(message) {
 
   toast.textContent =
     message;
 
+
   toast.classList.add(
     "show"
   );
 
+
   clearTimeout(
     showToast.timer
   );
+
 
   showToast.timer =
     setTimeout(
@@ -4289,9 +4666,9 @@ function showToast(message) {
 }
 
 
-/* ==================================================
+/* =========================
    SAVE
-================================================== */
+========================= */
 
 function saveState() {
 
@@ -4326,15 +4703,17 @@ function saveState() {
 
   localStorage.setItem(
     "gbsGoryeoNewsroomState",
-    JSON.stringify(state)
+    JSON.stringify(
+      state
+    )
   );
 
 }
 
 
-/* ==================================================
+/* =========================
    LOAD
-================================================== */
+========================= */
 
 function loadState() {
 
@@ -4362,6 +4741,7 @@ function loadState() {
 
       selectedPerson =
         state.selectedPerson;
+
 
       startInterviewBtn.disabled =
         false;
@@ -4396,25 +4776,30 @@ function loadState() {
       .textContent =
         note1.value.length;
 
+
     document
       .getElementById("note2Count")
       .textContent =
         note2.value.length;
+
 
     document
       .getElementById("note3Count")
       .textContent =
         note3.value.length;
 
+
     document
       .getElementById("note4Count")
       .textContent =
         note4.value.length;
 
+
     document
       .getElementById("headlineCount")
       .textContent =
         headlineInput.value.length;
+
 
     document
       .getElementById("articleCount")
@@ -4432,48 +4817,68 @@ function loadState() {
     }
 
 
-    const step =
+    let step =
       Number(
         state.currentStep
       );
 
 
     if (
-      step >= 1 &&
-      step <= 5 &&
-      selectedPerson
+      !Number.isInteger(step) ||
+      step < 1 ||
+      step > 5
     ) {
 
-      if (step === 3) {
-
-        updateNotePreview();
-
-      }
-
-
-      if (step === 4) {
-
-        prepareQuiz();
-
-      }
-
-
-      if (step === 5) {
-
-        renderResult();
-
-      }
-
-
-      showStep(step);
+      step = 1;
 
     }
+
+
+    if (
+      step > 1 &&
+      !selectedPerson
+    ) {
+
+      step = 1;
+
+    }
+
+
+    if (step === 3) {
+
+      updateNotePreview();
+
+    }
+
+
+    /*
+      팩트체크 화면을 새로 불러오면
+      퀴즈를 다시 표시한다.
+      기존 통과 상태는 안전하게 초기화한다.
+    */
+
+    if (step === 4) {
+
+      prepareQuiz();
+
+    }
+
+
+    if (step === 5) {
+
+      renderResult();
+
+    }
+
+
+    showStep(step);
 
   }
 
   catch(error) {
 
     console.error(
+      "저장 데이터를 불러오지 못했습니다.",
       error
     );
 
@@ -4482,9 +4887,9 @@ function loadState() {
 }
 
 
-/* ==================================================
+/* =========================
    START
-================================================== */
+========================= */
 
 renderPeople();
 
@@ -4493,4 +4898,4 @@ loadState();
 </script>
 
 </body>
-  </html>
+</html>
